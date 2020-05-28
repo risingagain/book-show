@@ -67,8 +67,8 @@ html {
       text-align: center;
       z-index: 1;
       img {
-        width: 178px;
-        height: 68px;
+        width: 125px;
+        height: 45px;
       }
     }
     .black-logo {
@@ -89,30 +89,33 @@ html {
         align-items: center;
         background-color: #676060;
         background-size: cover;
-        opacity: 0.8;
         .coverImage {
-          width: 50%;
+          width: 40%;
           margin: 0 auto;
           text-align: center;
           cursor: pointer;
           img {
             &.book {
               width: 100%;
+              &:hover {
+                transform: scale(1.05);
+              }
             }
           }
           .start {
             margin-top: 30px;
             display: flex;
             flex-direction: column;
+            opacity: 0.8;
             span {
               color: white;
               font-size: 16px;
               margin-top: 10px;
             }
+            &:hover {
+              opacity: 1;
+            }
           }
-        }
-        &:hover {
-          opacity: 1;
         }
       }
 
@@ -135,7 +138,11 @@ html {
         flex-direction: column;
         box-sizing: border-box;
         p {
-          color: white;
+          color: #F9B000;
+          padding: 20px 0;
+          @media screen and (max-width: 992px) {
+            padding: 0;
+          }
         }
         .menu-items {
           display: flex;
@@ -211,17 +218,53 @@ html {
               bottom: 0;
               display: flex;
               flex-direction: column;
-              padding: 10px;
+              @media screen and (max-width: 992px) {
+                height: 80%;
+              }
               span {
                 color: white;
-                padding: 20px 0;
+                padding: 40px 0 20px 0;
                 text-align: center;
                 font-size: 12px;
+                @media screen and (max-width: 992px) {
+                  padding: 10px 0 0 0;
+                }
               }
-              div {
-                padding: 20px 0;
+              > div {
+                padding: 20px 0 40px 0;
                 display: flex;
                 justify-content: space-around;
+                @media screen and (max-width: 992px) {
+                  padding: 10px 0 10px 0;
+                }
+                a {
+                  z-index: 2;
+                  opacity: 0.8;
+                  &:hover {
+                    opacity: 1;
+                  }
+                }
+                > img {
+                  &:first-child {
+                    z-index: 2;
+                    opacity: 0.8;
+                    &:hover {
+                      opacity: 1;
+                    }
+                  }
+                }
+              }
+              > img {
+                &:last-child {
+                  height: 500px;
+                  @media screen and (max-width: 992px) {
+                    width: 80px;
+                  }
+                }
+                @media screen and (max-width: 992px) {
+                  height: 40px;
+                  margin: 0 auto;
+                }
               }
             }            
           }
@@ -324,10 +367,10 @@ html {
           &:nth-child(3) {
             .item {
               &:first-child {
-                margin-right: 30%;
+                margin-right: 36%;
               }
               &:last-child {
-                margin-left: 30%;
+                margin-left: 36%;
               }
             }
           }
@@ -350,17 +393,40 @@ html {
             .number {
               text-align: right;
               margin-bottom: 20px;
+              @media screen and (max-width: 992px) {
+                margin: 0;
+              }
             }
             .content {
               color: white;
               margin-bottom: 20px;
               text-decoration: none;
+              p {
+                &:first-child {
+                  font-size: 18px;
+                }
+                &:last-child {
+                  font-size: 14px;
+                }
+                @media screen and (max-width: 992px) {
+                  margin: 0 0 5px 0;
+                  &:first-child {
+                    font-size: 14px;
+                  }
+                  &:last-child {
+                    font-size: 10px;
+                  }
+                }
+              }
             }
             .icons {
               img {
                 cursor: pointer;
                 &:last-child {
                   margin-left: 15px;
+                  @media screen and (max-width: 992px) {
+                    margin-left: 5px;
+                  }
                 }
               }
             }
@@ -377,4 +443,8 @@ html {
 
 @media screen and (orientation:landscape) {
   
+}
+
+a {
+  text-decoration: none;
 }

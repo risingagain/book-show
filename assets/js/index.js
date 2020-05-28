@@ -5,6 +5,12 @@ $(function(){
 
   var reg = /\_(.*)\./;
 
+  $('.no-collar-economy .item').click(function() {
+    var domain = location.href.split('/')[0] + '/' + location.href.split('/')[1] + '/' + location.href.split('/')[2];
+    domain += '/' + $(this).attr('data-href');
+    location.href = domain;
+  });
+
   $('.no-collar-economy-show .prev_page').click(function() {
     var chapter = location.href.split('/').pop().split('.')[0].slice(-1);
     var current = reg.exec($('.no-collar-economy-show .view img').attr('src'))[1];
