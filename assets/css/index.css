@@ -55,6 +55,7 @@ html body .collapsed-menu ul li {
   border-bottom: solid 0.1px white;
   padding: 10px;
   cursor: pointer;
+  opacity: 0.8;
 }
 
 html body .collapsed-menu ul li:last-child {
@@ -66,8 +67,39 @@ html body .collapsed-menu ul li a {
   text-decoration: none;
 }
 
+html body .collapsed-menu ul li:hover {
+  opacity: 1;
+}
+
 html body .collapsed-menu.hidden {
   max-height: 0;
+}
+
+html body .white-logo {
+  position: absolute;
+  top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 1;
+}
+
+html body .white-logo img {
+  width: 178px;
+  height: 68px;
+}
+
+html body .black-logo {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+}
+
+html body .black-logo img {
+  width: 70px;
+  height: 25px;
 }
 
 html body .container {
@@ -88,6 +120,8 @@ html body .container .left, html body .container .right {
       -ms-flex-align: center;
           align-items: center;
   background-color: #676060;
+  background-size: cover;
+  opacity: 0.8;
 }
 
 html body .container .left .coverImage, html body .container .right .coverImage {
@@ -116,6 +150,18 @@ html body .container .left .coverImage .start span, html body .container .right 
   color: white;
   font-size: 16px;
   margin-top: 10px;
+}
+
+html body .container .left:hover, html body .container .right:hover {
+  opacity: 1;
+}
+
+html body .container .left {
+  background-image: url("../images/bg1.png");
+}
+
+html body .container .right {
+  background-image: url("../images/bg2.jpg");
 }
 
 html body.no-collar-economy {
@@ -285,6 +331,11 @@ html body.no-collar-economy-show .container .prev_page, html body.no-collar-econ
   position: absolute;
   left: 50%;
   cursor: pointer;
+  opacity: 0.8;
+}
+
+html body.no-collar-economy-show .container .prev_page:hover, html body.no-collar-economy-show .container .next_page:hover {
+  opacity: 1;
 }
 
 html body.no-collar-economy-show .container .prev_page {
@@ -299,6 +350,11 @@ html body.no-collar-economy-show .container .prev_chapter, html body.no-collar-e
   position: absolute;
   top: 50%;
   cursor: pointer;
+  opacity: 0.8;
+}
+
+html body.no-collar-economy-show .container .prev_chapter:hover, html body.no-collar-economy-show .container .next_chapter:hover {
+  opacity: 1;
 }
 
 html body.no-collar-economy-show .container .prev_chapter {

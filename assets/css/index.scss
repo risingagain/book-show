@@ -40,6 +40,7 @@ html {
           border-bottom: solid 0.1px white;
           padding: 10px;
           cursor: pointer;
+          opacity: 0.8;
           &:last-child {
             border: none;
           }
@@ -47,10 +48,36 @@ html {
             color: white;
             text-decoration: none;
           }
+          &:hover {
+            opacity: 1;
+          }
         }
       }
       &.hidden {
         max-height: 0;
+      }
+    }
+    .white-logo {
+      position: absolute;
+      top: 50px;
+      margin-left: auto;
+      margin-right: auto;
+      left: 0;
+      right: 0;
+      text-align: center;
+      z-index: 1;
+      img {
+        width: 178px;
+        height: 68px;
+      }
+    }
+    .black-logo {
+      position: absolute;
+      top: 50px;
+      right: 50px;
+      img {
+        width: 70px;
+        height: 25px;
       }
     }
     .container {
@@ -61,6 +88,8 @@ html {
         display: flex;
         align-items: center;
         background-color: #676060;
+        background-size: cover;
+        opacity: 0.8;
         .coverImage {
           width: 50%;
           margin: 0 auto;
@@ -82,6 +111,16 @@ html {
             }
           }
         }
+        &:hover {
+          opacity: 1;
+        }
+      }
+
+      .left {
+        background-image: url('../images/bg1.png');
+      }
+      .right {
+        background-image: url('../images/bg2.jpg');
       }
     }
 
@@ -200,6 +239,10 @@ html {
           position: absolute;
           left: 50%;
           cursor: pointer;
+          opacity: 0.8;
+          &:hover {
+            opacity: 1;
+          }
         }
         .prev_page {
           top: 50px;
@@ -211,6 +254,10 @@ html {
           position: absolute;
           top: 50%;
           cursor: pointer;
+          opacity: 0.8;
+          &:hover {
+            opacity: 1;
+          }
         }
         .prev_chapter {
           left: 50px;
