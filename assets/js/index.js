@@ -298,7 +298,10 @@ $(function(){
 
   $('.our-digital-world .item').hover(function() {
     var bg = $(this).attr('bg-data');
-    var src = location.href.split('/')[0] + '/' + location.href.split('/')[1] + '/' + location.href.split('/')[2];
+    var srcs = location.href.split('/'), src = '';
+    for (var i = 0; i < srcs.length - 2 ; i++) {
+      src += srcs[i];
+    }
     src += '/assets/images/digital-world/' + bg;
 
     if (bg == '') {
