@@ -299,11 +299,11 @@ $(function(){
   $('.our-digital-world .item').hover(function() {
     var bg = $(this).attr('bg-data');
     var srcs = location.href.split('/'), src = '';
-    for (var i = 0; i < srcs.length - 2 ; i++) {
-      src += srcs[i];
+    console.log(srcs);
+    for (var i = 0; i < srcs.length - 1 ; i++) {
+      src += srcs[i] + '/';
     }
-    src += '/assets/images/digital-world/' + bg;
-
+    src += 'assets/images/digital-world/' + bg;
     if (bg == '') {
       $('.our-digital-world .bg img').attr('src', src + 'worldmap.png');
     } else {
