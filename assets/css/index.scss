@@ -17,6 +17,10 @@ html {
       left: 50px;
       top: 50px;
       z-index: 2;
+      @media screen and (max-width: 992px) {
+        left: 15px;
+        top: 15px;
+      }
       img {
         width: 100%;
         cursor: pointer;
@@ -31,6 +35,10 @@ html {
       transition: all 0.3s ease-in-out;
       overflow: hidden;
       z-index: 2;
+      @media screen and (max-width: 992px) {
+        left: 15px;
+        top: 45px;
+      }
       ul {
         list-style-type: none;
         margin: 0;
@@ -66,9 +74,16 @@ html {
       right: 0;
       text-align: center;
       z-index: 1;
+      @media screen and (max-width: 992px) {
+        top: 15px;
+      }
       img {
         width: 125px;
         height: 45px;
+        @media screen and (max-width: 992px) {
+          width: 65px;
+          height: 22px;
+        }
       }
     }
     .black-logo {
@@ -78,6 +93,10 @@ html {
       img {
         width: 70px;
         height: 25px;
+      }
+      @media screen and (max-width: 992px) {
+        top: 15px;
+        right: 15px;
       }
     }
     .container {
@@ -134,9 +153,12 @@ html {
       }
       .container {
         display: flex;
-        padding: 0 50px;
+        padding: 80px 50px 0 50px;
         flex-direction: column;
         box-sizing: border-box;
+        @media screen and (max-width: 992px) {
+          padding: 30px 15px 0 15px;
+        }
         p {
           color: #F9B000;
           padding: 20px 0;
@@ -153,6 +175,7 @@ html {
             display: flex;
             flex-direction: column;
             opacity: 0.5;
+            min-width: 0;
             &:hover {
               opacity: 1;
               cursor: pointer;
@@ -218,39 +241,67 @@ html {
               bottom: 0;
               display: flex;
               flex-direction: column;
-              @media screen and (max-width: 992px) {
-                height: 80%;
-              }
               span {
                 color: white;
-                padding: 40px 0 20px 0;
-                text-align: center;
-                font-size: 12px;
+                text-align: left;
+                font-size: 14px;
+                line-height: 20px;
                 @media screen and (max-width: 992px) {
-                  padding: 10px 0 0 0;
+                  padding: 0;
+                  font-size: 12px;
+                }
+                @media screen and (max-width: 576px) {
+                  font-size: 10px;
+                  line-height: 10px;
                 }
               }
               > div {
-                padding: 20px 0 40px 0;
+                &.title {
+                  padding: 40px 0 20px 0;
+                  display: flex;
+                  justify-content: center;
+                  @media screen and (max-width: 576px) {
+                    padding: 10px 0 5px 0;
+                  }
+                }
+                padding: 20px 20px 40px 20px;                
                 display: flex;
                 justify-content: space-around;
+                align-items: center;
                 @media screen and (max-width: 992px) {
                   padding: 10px 0 10px 0;
+                }
+                @media screen and (max-width: 576px) {
+                  padding: 5px 0 10px 0;
                 }
                 a {
                   z-index: 2;
                   opacity: 0.8;
+                  img {
+                    width: 40px;
+                    height: 40px;
+                    @media screen and (max-width: 992px) {
+                      width: 20px;
+                      height: 20px;
+                    }
+                    @media screen and (max-width: 576px) {
+                      font-size: 10px;
+                    }
+                  }
                   &:hover {
                     opacity: 1;
                   }
                 }
                 > img {
-                  &:first-child {
-                    z-index: 2;
-                    opacity: 0.8;
-                    &:hover {
-                      opacity: 1;
-                    }
+                  width: 40px;
+                  height: 40px;
+                  @media screen and (max-width: 992px) {
+                    width: 30px;
+                    height: 30px;
+                  }
+                  @media screen and (max-width: 576px) {
+                    width: 20px;
+                    height: 20px;
                   }
                 }
               }
@@ -259,6 +310,12 @@ html {
                   height: 500px;
                   @media screen and (max-width: 992px) {
                     width: 80px;
+                    max-width: 100%;
+                    height: 400px;
+                  }
+                  @media screen and (max-width: 576px) {
+                    width: 50px;
+                    height: 300px;
                   }
                 }
                 @media screen and (max-width: 992px) {
@@ -341,6 +398,9 @@ html {
         justify-content: space-around;
         padding: 100px;
         box-sizing: border-box;
+        @media screen and (max-width: 992px) {
+          padding: 0 20px;
+        }
         .row {
           display: flex;
           justify-content: center;
@@ -379,11 +439,14 @@ html {
           }
           .item {
             opacity: 0.5;
-            &:hover {
+            &.active {
               opacity: 1;
             }
             &:last-child {
               .number {
+                text-align: left;
+              }
+              .content {
                 text-align: left;
               }
               .icons {
@@ -401,12 +464,25 @@ html {
               color: white;
               margin-bottom: 20px;
               text-decoration: none;
+              text-align: right;
               p {
-                &:first-child {
+                &:nth-child(1) {
                   font-size: 18px;
+                  line-height: 21px;
+                  margin-bottom: 5px;
+                  @media screen and (max-width: 992px) {
+                    font-size: 14px;
+                    line-height: 14px;
+                  }
                 }
-                &:last-child {
+                &:nth-child(2) {
                   font-size: 14px;
+                  line-height: 16px;
+                  margin-top: 0;
+                  @media screen and (max-width: 992px) {
+                    font-size: 10px;
+                    line-height: 10px;
+                  }
                 }
                 @media screen and (max-width: 992px) {
                   margin: 0 0 5px 0;

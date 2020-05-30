@@ -296,4 +296,18 @@ $(function(){
     }
   });
 
+  $('.our-digital-world .item').hover(function() {
+    var bg = $(this).attr('bg-data');
+    var src = location.href.split('/')[0] + '/' + location.href.split('/')[1] + '/' + location.href.split('/')[2];
+    src += '/assets/images/digital-world/' + bg;
+
+    if (bg == '') {
+      $('.our-digital-world .bg img').attr('src', src + 'worldmap.png');
+    } else {
+      $('.our-digital-world .bg img').attr('src', src + '.png');
+    }
+    $('.our-digital-world .item').removeClass('active');
+    $(this).addClass('active');
+  });
+
 })
