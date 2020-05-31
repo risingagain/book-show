@@ -713,6 +713,17 @@ html body.our-digital-world .container .row .item .icons img:last-child {
   }
 }
 
+@media screen and (orientation: portrait) {
+  html {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+    height: 100vw;
+  }
+  html .container .menu-items .item:hover {
+    opacity: 0.6;
+  }
+}
+
 a {
   text-decoration: none;
 }

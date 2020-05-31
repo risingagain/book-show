@@ -398,6 +398,7 @@ html {
         justify-content: space-around;
         padding: 100px;
         box-sizing: border-box;
+        // background-image: url('../images/digital-world/worldmap.png');
         @media screen and (max-width: 992px) {
           padding: 0 20px;
         }
@@ -514,7 +515,19 @@ html {
 }
 
 @media screen and (orientation:portrait) {
-
+  html {
+    transform: rotate(90deg);
+    height: 100vw;
+    .container {
+      .menu-items {
+        .item {
+          &:hover {
+            opacity: 0.6;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media screen and (orientation:landscape) {

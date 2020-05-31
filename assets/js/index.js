@@ -303,9 +303,7 @@ $(function(){
     for (var i = 0; i < srcs.length - 1 ; i++) {
       src += srcs[i] + '/';
     }
-    console.log(src);
     src += 'assets/images/digital-world/' + bg;
-    console.log(src);
     if (bg == '') {
       $('.our-digital-world .bg img').attr('src', src + 'worldmap.png');
     } else {
