@@ -298,19 +298,22 @@ $(function(){
 
   $('.our-digital-world .item').hover(function() {
     var bg = $(this).attr('bg-data');
-    var srcs = location.href.split('/'), src = '';
-    console.log(srcs);
-    for (var i = 0; i < srcs.length - 1 ; i++) {
-      src += srcs[i] + '/';
-    }
-    src += 'assets/images/digital-world/' + bg;
-    if (bg == '') {
-      $('.our-digital-world .bg img').attr('src', src + 'worldmap.webp');
-    } else {
-      $('.our-digital-world .bg img').attr('src', src + '.webp');
-    }
+    if (bg == '') bg = 'worldmap';
+    $('.bg img').addClass('hidden');
+    $(`.bg #${bg}`).removeClass('hidden');
     $('.our-digital-world .item').removeClass('active');
     $(this).addClass('active');
+  //   var srcs = location.href.split('/'), src = '';
+  //   console.log(srcs);
+  //   for (var i = 0; i < srcs.length - 1 ; i++) {
+  //     src += srcs[i] + '/';
+  //   }
+  //   src += 'assets/images/digital-world/' + bg;
+  //   if (bg == '') {
+  //     $('.our-digital-world .bg img').attr('src', src + 'worldmap.webp');
+  //   } else {
+  //     $('.our-digital-world .bg img').attr('src', src + '.webp');
+  //   }
   });
 
 })

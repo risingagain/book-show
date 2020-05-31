@@ -732,6 +732,10 @@ a {
   text-decoration: none;
 }
 
+.hidden {
+  display: none;
+}
+
 #html5-watermark {
   display: none !important;
 }
