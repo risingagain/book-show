@@ -305,9 +305,9 @@ $(function(){
     }
     src += 'assets/images/digital-world/' + bg;
     if (bg == '') {
-      $('.our-digital-world .bg img').attr('src', src + 'worldmap.png');
+      $('.our-digital-world .bg img').attr('src', src + 'worldmap.webp');
     } else {
-      $('.our-digital-world .bg img').attr('src', src + '.png');
+      $('.our-digital-world .bg img').attr('src', src + '.webp');
     }
     $('.our-digital-world .item').removeClass('active');
     $(this).addClass('active');

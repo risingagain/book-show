@@ -457,6 +457,9 @@ html {
             .number {
               text-align: right;
               margin-bottom: 20px;
+              img {
+                width: 20px;
+              }
               @media screen and (max-width: 992px) {
                 margin: 0;
               }
@@ -468,20 +471,20 @@ html {
               text-align: right;
               p {
                 &:nth-child(1) {
-                  font-size: 18px;
-                  line-height: 21px;
+                  font-size: 22px;
+                  line-height: 22px;
                   margin-bottom: 5px;
                   @media screen and (max-width: 992px) {
-                    font-size: 14px;
+                    font-size: 16px;
                     line-height: 14px;
                   }
                 }
                 &:nth-child(2) {
-                  font-size: 14px;
-                  line-height: 16px;
+                  font-size: 18px;
+                  line-height: 18px;
                   margin-top: 0;
                   @media screen and (max-width: 992px) {
-                    font-size: 10px;
+                    font-size: 14px;
                     line-height: 10px;
                   }
                 }
@@ -536,4 +539,8 @@ html {
 
 a {
   text-decoration: none;
+}
+
+#html5-watermark {
+  display: none !important;
 }
