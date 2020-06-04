@@ -537,7 +537,7 @@ html body.no-collar-economy-show .container .next_chapter {
 html body.no-collar-economy-show .container .view {
   width: 100%;
   height: 100%;
-  padding: 100px;
+  padding: 100px 10%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
