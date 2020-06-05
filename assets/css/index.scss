@@ -17,6 +17,10 @@ html {
       left: 50px;
       top: 50px;
       z-index: 2;
+      @media screen and (max-width: 992px) {
+        left: 15px;
+        top: 15px;
+      }
       img {
         width: 100%;
         cursor: pointer;
@@ -31,6 +35,10 @@ html {
       transition: all 0.3s ease-in-out;
       overflow: hidden;
       z-index: 2;
+      @media screen and (max-width: 992px) {
+        left: 15px;
+        top: 45px;
+      }
       ul {
         list-style-type: none;
         margin: 0;
@@ -40,6 +48,7 @@ html {
           border-bottom: solid 0.1px white;
           padding: 10px;
           cursor: pointer;
+          opacity: 0.8;
           &:last-child {
             border: none;
           }
@@ -47,10 +56,47 @@ html {
             color: white;
             text-decoration: none;
           }
+          &:hover {
+            opacity: 1;
+          }
         }
       }
       &.hidden {
         max-height: 0;
+      }
+    }
+    .white-logo {
+      position: absolute;
+      top: 50px;
+      margin-left: auto;
+      margin-right: auto;
+      left: 0;
+      right: 0;
+      text-align: center;
+      z-index: 1;
+      @media screen and (max-width: 992px) {
+        top: 15px;
+      }
+      img {
+        width: 125px;
+        height: 45px;
+        @media screen and (max-width: 992px) {
+          width: 65px;
+          height: 22px;
+        }
+      }
+    }
+    .black-logo {
+      position: absolute;
+      top: 50px;
+      right: 50px;
+      img {
+        width: 70px;
+        height: 25px;
+      }
+      @media screen and (max-width: 992px) {
+        top: 15px;
+        right: 15px;
       }
     }
     .container {
@@ -61,27 +107,42 @@ html {
         display: flex;
         align-items: center;
         background-color: #676060;
+        background-size: cover;
         .coverImage {
-          width: 50%;
+          width: 40%;
           margin: 0 auto;
           text-align: center;
           cursor: pointer;
           img {
             &.book {
               width: 100%;
+              &:hover {
+                transform: scale(1.05);
+              }
             }
           }
           .start {
             margin-top: 30px;
             display: flex;
             flex-direction: column;
+            opacity: 0.8;
             span {
               color: white;
               font-size: 16px;
               margin-top: 10px;
             }
+            &:hover {
+              opacity: 1;
+            }
           }
         }
+      }
+
+      .left {
+        background-image: url('../images/bg1.png');
+      }
+      .right {
+        background-image: url('../images/bg2.png');
       }
     }
 
@@ -92,11 +153,18 @@ html {
       }
       .container {
         display: flex;
-        padding: 0 50px;
+        padding: 80px 50px 0 50px;
         flex-direction: column;
         box-sizing: border-box;
+        @media screen and (max-width: 992px) {
+          padding: 30px 15px 0 15px;
+        }
         p {
-          color: white;
+          color: #F9B000;
+          padding: 20px 0;
+          @media screen and (max-width: 992px) {
+            padding: 0;
+          }
         }
         .menu-items {
           display: flex;
@@ -107,6 +175,7 @@ html {
             display: flex;
             flex-direction: column;
             opacity: 0.5;
+            min-width: 0;
             &:hover {
               opacity: 1;
               cursor: pointer;
@@ -172,17 +241,87 @@ html {
               bottom: 0;
               display: flex;
               flex-direction: column;
-              padding: 10px;
               span {
                 color: white;
-                padding: 20px 0;
-                text-align: center;
-                font-size: 12px;
+                text-align: left;
+                font-size: 14px;
+                line-height: 20px;
+                @media screen and (max-width: 992px) {
+                  padding: 0;
+                  font-size: 12px;
+                }
+                @media screen and (max-width: 576px) {
+                  font-size: 10px;
+                  line-height: 10px;
+                }
               }
-              div {
-                padding: 20px 0;
+              > div {
+                &.title {
+                  padding: 40px 0 20px 0;
+                  display: flex;
+                  justify-content: center;
+                  @media screen and (max-width: 576px) {
+                    padding: 10px 0 5px 0;
+                  }
+                }
+                padding: 20px 20px 40px 20px;                
                 display: flex;
                 justify-content: space-around;
+                align-items: center;
+                @media screen and (max-width: 992px) {
+                  padding: 10px 0 10px 0;
+                }
+                @media screen and (max-width: 576px) {
+                  padding: 5px 0 10px 0;
+                }
+                a {
+                  z-index: 2;
+                  opacity: 0.8;
+                  img {
+                    width: 40px;
+                    height: 40px;
+                    @media screen and (max-width: 992px) {
+                      width: 20px;
+                      height: 20px;
+                    }
+                    @media screen and (max-width: 576px) {
+                      font-size: 10px;
+                    }
+                  }
+                  &:hover {
+                    opacity: 1;
+                  }
+                }
+                > img {
+                  width: 40px;
+                  height: 40px;
+                  @media screen and (max-width: 992px) {
+                    width: 30px;
+                    height: 30px;
+                  }
+                  @media screen and (max-width: 576px) {
+                    width: 20px;
+                    height: 20px;
+                  }
+                }
+              }
+              > img {
+                &:last-child {
+                  height: 500px;
+                  @media screen and (max-width: 992px) {
+                    width: 80px;
+                    max-width: 100%;
+                    height: 400px;
+                  }
+                  @media screen and (max-width: 576px) {
+                    width: 50px;
+                    height: 300px;
+                  }
+                }
+                @media screen and (max-width: 992px) {
+                  height: 40px;
+                  margin: 0 auto;
+                }
               }
             }            
           }
@@ -200,6 +339,10 @@ html {
           position: absolute;
           left: 50%;
           cursor: pointer;
+          opacity: 0.8;
+          &:hover {
+            opacity: 1;
+          }
         }
         .prev_page {
           top: 50px;
@@ -211,6 +354,10 @@ html {
           position: absolute;
           top: 50%;
           cursor: pointer;
+          opacity: 0.8;
+          &:hover {
+            opacity: 1;
+          }
         }
         .prev_chapter {
           left: 50px;
@@ -221,11 +368,12 @@ html {
         .view {
           width: 100%;
           height: 100%;
-          padding: 100px;
+          padding: 100px 10%;
           box-sizing: border-box;
           img {
             width: 100%;
             height: 100%;
+            object-fit: cover;
           }
         }
       }
@@ -243,6 +391,7 @@ html {
         img {
           width: 100%;
           height: 100%;
+          object-fit: cover;
         }
       }
       .container {
@@ -251,6 +400,10 @@ html {
         justify-content: space-around;
         padding: 100px;
         box-sizing: border-box;
+        // background-image: url('../images/digital-world/worldmap.png');
+        @media screen and (max-width: 992px) {
+          padding: 0 20px;
+        }
         .row {
           display: flex;
           justify-content: center;
@@ -277,10 +430,10 @@ html {
           &:nth-child(3) {
             .item {
               &:first-child {
-                margin-right: 30%;
+                margin-right: 36%;
               }
               &:last-child {
-                margin-left: 30%;
+                margin-left: 36%;
               }
             }
           }
@@ -289,11 +442,14 @@ html {
           }
           .item {
             opacity: 0.5;
-            &:hover {
+            &.active {
               opacity: 1;
             }
             &:last-child {
               .number {
+                text-align: left;
+              }
+              .content {
                 text-align: left;
               }
               .icons {
@@ -303,17 +459,56 @@ html {
             .number {
               text-align: right;
               margin-bottom: 20px;
+              img {
+                width: 20px;
+              }
+              @media screen and (max-width: 992px) {
+                margin: 0;
+              }
             }
             .content {
               color: white;
               margin-bottom: 20px;
               text-decoration: none;
+              text-align: right;
+              p {
+                &:nth-child(1) {
+                  font-size: 22px;
+                  line-height: 22px;
+                  margin-bottom: 5px;
+                  @media screen and (max-width: 992px) {
+                    font-size: 16px;
+                    line-height: 14px;
+                  }
+                }
+                &:nth-child(2) {
+                  font-size: 18px;
+                  line-height: 18px;
+                  margin-top: 0;
+                  @media screen and (max-width: 992px) {
+                    font-size: 14px;
+                    line-height: 10px;
+                  }
+                }
+                @media screen and (max-width: 992px) {
+                  margin: 0 0 5px 0;
+                  &:first-child {
+                    font-size: 14px;
+                  }
+                  &:last-child {
+                    font-size: 10px;
+                  }
+                }
+              }
             }
             .icons {
               img {
                 cursor: pointer;
                 &:last-child {
                   margin-left: 15px;
+                  @media screen and (max-width: 992px) {
+                    margin-left: 5px;
+                  }
                 }
               }
             }
@@ -325,9 +520,33 @@ html {
 }
 
 @media screen and (orientation:portrait) {
-
+  html {
+    transform: rotate(90deg);
+    height: 100vw;
+    .container {
+      .menu-items {
+        .item {
+          &:hover {
+            opacity: 0.6;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media screen and (orientation:landscape) {
   
+}
+
+a {
+  text-decoration: none;
+}
+
+.hidden {
+  display: none;
+}
+
+#html5-watermark {
+  display: none !important;
 }
