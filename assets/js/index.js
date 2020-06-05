@@ -6,9 +6,13 @@ $(function(){
   var reg = /\_(.*)\./;
 
   $('.no-collar-economy .item').click(function() {
-    var domain = location.href.split('/')[0] + '/' + location.href.split('/')[1] + '/' + location.href.split('/')[2];
-    domain += '/' + $(this).attr('data-href');
-    location.href = domain;
+    var srcs = location.href.split('/'), src = '';
+    console.log(srcs);
+    for (var i = 0; i < srcs.length - 1 ; i++) {
+      src += srcs[i] + '/';    }
+
+    src += '/' + $(this).attr('data-href');
+    location.href = src;
   });
 
   $('.no-collar-economy-show .prev_page').click(function() {
