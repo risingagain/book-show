@@ -516,8 +516,57 @@ html {
         }
       }
     }
+    &.about {
+      background-color: white;
+      .black-logo {
+        img {
+          width: 125px;
+          height: 45px;
+        }        
+      }
+      .author-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 80px 150px;
+        h1 {
+          margin-bottom: 100px;
+        }
+        .authors {
+          display: flex;
+          justify-content: space-between;
+          .author {
+            padding: 25px 50px;
+            .author-img-container {
+              width: 200px;
+              height: 200px;
+              border: solid 1px grey;
+              border-radius: 50%;
+              padding: 3px;
+              margin: 0 auto;
+              img {
+                width: 200px;
+                border-radius: 50%;
+              }
+            }
+            .author-header {
+              padding: 20px 0;
+              .author-title {
+                font-size: 30px;
+                font-weight: 700;
+              }
+              .author-email {
+                color: blue;
+                cursor: pointer;
+              }
+            }
+          }
+        }
+      }
+    }
   }
-}
+} 
 
 @media screen and (orientation:portrait) {
   html {

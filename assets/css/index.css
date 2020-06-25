@@ -721,6 +721,77 @@ html body.our-digital-world .container .row .item .icons img:last-child {
   }
 }
 
+html body.about {
+  background-color: white;
+}
+
+html body.about .black-logo img {
+  width: 125px;
+  height: 45px;
+}
+
+html body.about .author-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 80px 150px;
+}
+
+html body.about .author-container h1 {
+  margin-bottom: 100px;
+}
+
+html body.about .author-container .authors {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+html body.about .author-container .authors .author {
+  padding: 25px 50px;
+}
+
+html body.about .author-container .authors .author .author-img-container {
+  width: 200px;
+  height: 200px;
+  border: solid 1px grey;
+  border-radius: 50%;
+  padding: 3px;
+  margin: 0 auto;
+}
+
+html body.about .author-container .authors .author .author-img-container img {
+  width: 200px;
+  border-radius: 50%;
+}
+
+html body.about .author-container .authors .author .author-header {
+  padding: 20px 0;
+}
+
+html body.about .author-container .authors .author .author-header .author-title {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+html body.about .author-container .authors .author .author-header .author-email {
+  color: blue;
+  cursor: pointer;
+}
+
 @media screen and (orientation: portrait) {
   html {
     -webkit-transform: rotate(90deg);
