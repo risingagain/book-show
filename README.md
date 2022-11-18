@@ -4,7 +4,7 @@ The book was built with CSS and Javascript animation.
 ![2](https://user-images.githubusercontent.com/30007418/202661487-a2ea78e2-56e7-4c97-bda6-80dd0a01c65f.png)
 
 # Live
-[Home](https://risingagain.github.io/book-show//index.html)
-[Charpter 1](https://risingagain.github.io/book-show//no-collar-economy.html)
+[Home](https://risingagain.github.io/book-show//index.html) \
+[Charpter 1](https://risingagain.github.io/book-show//no-collar-economy.html) \
 [Charpter 2](https://risingagain.github.io/book-show//our-digital-world.html)
 
